@@ -5,7 +5,7 @@ public class Kadai16101201 {
 	public static void main(String[] args) {
 		final String TABLE = "0123456789ABCDEF";
 		Scanner stdIn = new Scanner(System.in);
-		System.out.print("³‚Ì®”“ü—Í:");
+		System.out.print("æ­£ã®æ•´æ•°å…¥åŠ›:");
 		int input = stdIn.nextInt();
 		
 		String binary = "";
@@ -15,7 +15,7 @@ public class Kadai16101201 {
 				break;
 			}
 		}
-		System.out.println("2i”:"+binary);
+		System.out.println("2é€²æ•°:"+binary);
 
 		String octal = "";
 		for(int i = input;;i = i/8){
@@ -24,7 +24,8 @@ public class Kadai16101201 {
 				break;
 			}
 		}
-		System.out.println("8i”:"+octal);
+		//System.out.printf("8é€²æ•°:%o\n",input);
+		System.out.println("8é€²æ•°:"+octal);
 		
 		String hexadecimal = "";
 		for(int i = input;;i = i/16){
@@ -33,7 +34,8 @@ public class Kadai16101201 {
 				break;
 			}
 		}
-		System.out.println("16i”:"+hexadecimal);
+		//System.out.printf("16é€²æ•°:%x\n",input);
+		System.out.println("16é€²æ•°:"+hexadecimal);
 		stdIn.close();
 	}
 }
