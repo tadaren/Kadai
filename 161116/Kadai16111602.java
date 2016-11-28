@@ -9,21 +9,18 @@ public class Kadai16111602 {
 		stdIn.close();
 		char[] after = new char[line.length()];
 		
-		for(int i = 0; i < line.length(); i++){
+		for(int i = 0, j = 0; i < line.length(); i++,j++){
 			if(line.charAt(i) == 'レ'){
-				after[i-1] = line.charAt(i+1);
-				after[i] = line.charAt(i-1);
+				after[j-1] = line.charAt(i+1);
+				after[j] = line.charAt(i-1);
 				i++;
 			}else{
-				after[i] = line.charAt(i);
+				after[j] = line.charAt(i);
 			}
-			
 		}
 		
 		String newline = String.valueOf(after);
         System.out.print("書き下し文：");
         System.out.print(newline);
-
 	}
-
 }
