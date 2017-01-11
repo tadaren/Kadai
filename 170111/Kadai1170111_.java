@@ -18,19 +18,17 @@ public class Kadai1170111_ {
 		try{
 			BufferedReader br = new BufferedReader(new FileReader(fileName));
 			String line;
-			Pattern pName = Pattern.compile(pattern);
+			Pattern pName = Pattern.compile(pattern, Pattern.CASE_INSENSITIVE);
 			while((line=br.readLine())!=null){
 				Matcher mName = pName.matcher(line);
 				while(mName.find()){
 					count++;
 				}
-				
 			}
 			br.close();
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		
 		System.out.println(count+"個見つかりました");
 	}
 

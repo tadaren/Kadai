@@ -10,14 +10,16 @@ public class Kadai1170111 {
 		String fileName = stdIn.nextLine();
 		System.out.print("検索文字列:");
 		String pattern = stdIn.nextLine();
+		pattern = pattern.toLowerCase();
 		stdIn.close();
 
 		int count = 0;
 		try{
 			BufferedReader br = new BufferedReader(new FileReader(fileName));
 			String line;
-			int index= 0;
 			while((line=br.readLine())!=null){
+				line = line.toLowerCase();
+				int index = 0;
 				while(true){
 					int num = line.indexOf(pattern, index);
 					if(num != -1){
